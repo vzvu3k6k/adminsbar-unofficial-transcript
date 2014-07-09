@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function(){
   document.querySelector('.transcript').addEventListener('click', function(event){
     var startTime = event.target.dataset.startTime;
     if(startTime){
-      this.play(toSec(startTime));
+      popcorn.play(toSec(startTime));
     }
   });
 
