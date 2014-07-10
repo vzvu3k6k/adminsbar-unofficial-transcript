@@ -23,22 +23,8 @@ html = <<HTML
   <head>
     <meta charset="utf-8">
     <title>Admins Bar Transcript</title>
+    <link rel="stylesheet" href="transcript.css">
     <script src="http://cdn.popcornjs.org/code/dist/popcorn-complete.min.js"></script>
-    <style>
-      .transcript {
-        height: 70vh;
-        overflow-y: scroll;
-        border: thin solid #ddd;
-        border-radius: 0.5ex;
-        height: calc(100vh - 200px);
-        min-height: 15em;
-        padding: 0.7em;
-      }
-
-      .transcript .current {
-        background-color: #cef;
-      }
-    </style>
   </head>
   <body>
     <div id="audio"></div>
