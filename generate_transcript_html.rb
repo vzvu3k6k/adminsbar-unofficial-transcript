@@ -22,12 +22,17 @@ html = <<HTML
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Admins Bar Transcript</title>
     <script src="popcorn-complete.js"></script>
     <style>
       .transcript {
         height: 70vh;
         overflow-y: scroll;
+        border: thin solid #ddd;
+        border-radius: 0.5ex;
+        height: calc(100vh - 200px);
+        min-height: 15em;
+        padding: 0.7em;
       }
 
       .transcript .speaking {
