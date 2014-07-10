@@ -4,10 +4,11 @@ document.addEventListener("DOMContentLoaded", function(){
   wrapper.controls = true;
   var popcorn = Popcorn(wrapper);
 
-  function toSec(str){ // "01:10" -> 70 (sec)
-    return str.split(':').reverse().reduce(function(prev, current, idx){
-      return prev + parseInt(current, 10) * Math.pow(60, idx);
-    }, 0);
+  function toSec(str){ // "01:10,222" -> 70.222 (sec)
+    var parts = str.split(',');
+    return parts[0].split(':').reverse().reduce(function(sum, current, idx){
+      return sum + parseInt(current, 10) * Math.pow(60, idx);
+    }, parseInt(parts[1], 10) / 1000);
   }
 
   var timeline = Array.prototype.map.call(
