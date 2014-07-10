@@ -23,7 +23,7 @@ html = <<HTML
   <head>
     <meta charset="utf-8">
     <title>Admins Bar Transcript</title>
-    <script src="popcorn-complete.js"></script>
+    <script src="http://cdn.popcornjs.org/code/dist/popcorn-complete.min.js"></script>
     <style>
       .transcript {
         height: 70vh;
