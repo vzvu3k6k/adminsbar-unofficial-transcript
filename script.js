@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function(){
     }
   });
 
-  // seeked event is not triggered when you seek on soundcloud player
+  // seeked event is not triggered when you seek with soundcloud player
   popcorn.on('seeked', function(){
     for(var i = 0; i < timeline.length; i++){
       if(timeline[i].startTime <= this.currentTime()){
