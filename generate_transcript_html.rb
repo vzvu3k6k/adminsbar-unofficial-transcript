@@ -1,10 +1,10 @@
 require 'redcarpet'
 
-subrip = File.read(ARGV[0]).scan(/(\d+:\d+:\d+),\d+ --> (\d+:\d+:\d+),\d+/)
-script = File.read(ARGV[1]).each_line.map(&:chomp)
+subrip = File.read(ARGV[0]).scan(/(\d+:\d+:\d+,\d+) --> (\d+:\d+:\d+,\d+)/)
+script = File.read(ARGV[1]).split("\n")
 
 if subrip.size != script.size
-  abort "sizes don't match."
+  abort "sizes don't match. (subrip: #{subrip.size}, script: #{script.size})"
 end
 
 markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
