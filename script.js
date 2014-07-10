@@ -22,16 +22,16 @@ document.addEventListener("DOMContentLoaded", function(){
     }
   );
 
-  function clearSpeaking(){
+  function clearCurrentLine(){
     Array.prototype.forEach.call(
-      document.querySelectorAll('.speaking'),
-      function(i){i.classList.remove('speaking')}
+      document.querySelectorAll('.current'),
+      function(i){i.classList.remove('current')}
     );
   }
 
-  function setSpeaking(node){
-    clearSpeaking();
-    node.classList.add('speaking');
+  function setCurrentLine(node){
+    clearCurrentLine();
+    node.classList.add('current');
     scrollIntoMiddle(node);
   }
 
@@ -41,13 +41,13 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   timeline.forEach(function(i){
-    popcorn.cue(i.startTime, setSpeaking.bind(null, i.node));
-    popcorn.cue(i.endTime, clearSpeaking);
+    popcorn.cue(i.startTime, setCurrentLine.bind(null, i.node));
+    popcorn.cue(i.endTime, clearCurrentLine);
   });
 
   var style = document.createElement('style');
   style.textContent = '.transcript p {cursor: pointer;}' +
-    '.transcript p:hover:not(.speaking) {background-color: #ddd;}';
+    '.transcript p:hover:not(.current) {background-color: #ddd;}';
   document.head.appendChild(style);
 
   document.querySelector('.transcript').addEventListener('click', function(event){
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function(){
     for(var i = 0; i < timeline.length; i++){
       if(timeline[i].startTime <= this.currentTime()){
         if(timeline[i].endTime > this.currentTime()){
-          setSpeaking(timeline[i].node);
+          setCurrentLine(timeline[i].node);
           return;
         }else if(i == timeline.length - 1 ||
                  timeline[i + 1].startTime > this.currentTime()){
@@ -71,6 +71,6 @@ document.addEventListener("DOMContentLoaded", function(){
         }
       }
     }
-    clearSpeaking();
+    clearCurrentLine();
   });
 }, false);

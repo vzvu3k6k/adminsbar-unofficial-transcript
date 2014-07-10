@@ -35,7 +35,7 @@ html = <<HTML
         padding: 0.7em;
       }
 
-      .transcript .speaking {
+      .transcript .current {
         background-color: #cef;
       }
     </style>
