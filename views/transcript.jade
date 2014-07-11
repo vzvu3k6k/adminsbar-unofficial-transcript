@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title #{metadata.volume}: #{metadata.title} - Admins Bar with Transcript
+    link(rel='stylesheet', href='styles/transcript.css')
+    script(src='http://cdn.popcornjs.org/code/dist/popcorn-complete.min.js')
+  body
+    .player
+      header
+        h1
+          a(href="http://adminsbar.mirakui.com/")
+            | Admins Bar
+          |  with transcript
+        h2 #{metadata.volume}: #{metadata.title}
+        time(datetime=metadata.date)= metadata.date
+        p!= metadata.description
+      #audio
+    .transcript
+      each talk in transcript
+        p(data-start-time=talk.startTime, data-end-time=talk.endTime)!= talk.text
+    footer!= metadata.license
+    script(src='scripts/transcript.js')

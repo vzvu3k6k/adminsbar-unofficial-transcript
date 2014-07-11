@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-height: 95vh;
+}
+
+.player {
+  order: 1;
+  flex: 0 0 45%;
+  width: 43%;
+}
+
+.transcript {
+  flex: 100 10 15%;
+  order: 3;
+  width: 49%;
+  overflow-y: scroll;
+  border: thin solid #ddd;
+  border-radius: 0.5ex;
+  height: 15em;
+  padding: 0.7em;
+
+  p {
+    margin: 1ex 0;
+    padding: 0.3ex;
+
+    &.current {
+      background-color: #cef;
+    }
+  }
+}
+
+footer {
+  order: 2;
+  flex: 1 0 45%;
+  margin: 1em 0;
+  width: 40%;
+  color: #999;
+  font-size: 80%;
+
+  a {
+    color: darken(#999, 5%);
+  }
+}
