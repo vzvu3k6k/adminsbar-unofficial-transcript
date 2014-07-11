@@ -13,7 +13,7 @@ $ ruby generate_transcript_html.rb transcripts/ep001.srt transcripts/ep001.txt >
 
 生成されたHTMLファイルは`file://`上で開くとXHRに失敗してうまく動かないので、適当なサーバーに置いてアクセスする。
 
-### なんでsrtとtxtに分けてるの？
+### なぜsrtとtxtに分かれているのか
 
 発言の位置を入力するには、波形ビューアーがある[Subtitle Editor](http://home.gna.org/subtitleeditor/)が便利だが、長文を入力するのには向いていない。そのため、エディタで発言を書き起こして（ep001.txt）、
 [Subtitle Editor](http://home.gna.org/subtitleeditor/)で発言の位置だけを入力して（ep001.srt）、2つを合成するという手順を取った。
