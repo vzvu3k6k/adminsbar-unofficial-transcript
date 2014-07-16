@@ -1,6 +1,6 @@
 # Admins Bar Transcript
 
-[Admins Bar](http://adminsbar.mirakui.com/)の[#1 - MySQL in the Real World](https://soundcloud.com/adminsbar/adminsbar-1)の[一部を書き起こした](https://github.com/vzvu3k6k/adminsbar-unofficial-transcript/blob/master/transcripts/ep001.txt)。内容の正確性は保証しない。
+[Admins Bar](http://admins.bar/)の[#1 - MySQL in the Real World](https://soundcloud.com/adminsbar/adminsbar-1)の[一部を書き起こした](https://github.com/vzvu3k6k/adminsbar-unofficial-transcript/blob/master/transcripts/ep001.txt)。内容の正確性は保証しない。
 
 ## How to Build
 
